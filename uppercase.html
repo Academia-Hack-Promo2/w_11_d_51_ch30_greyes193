@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+	   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title></title>
+	    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	    <link rel="stylesheet" type="text/css" href="css/bootstrap-reset.css" media="screen">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+	</head>
+	  	<body>
+
+			<textarea name="" id="area" cols="30" rows="10"></textarea>
+			<div id="txt"></div>
+			<!-- Conforme se vaya escribiendo, se ira colocando el mismo texto, letra por letra en el div pero en MAYUSCULAS -->
+			    <script src="js/jquery.js"></script>
+			   <script>
+			       $(function(){
+			    		var caja = $("#area");
+			    		$("#area").keyup(function() {
+			    			texto = caja.val();
+			    			caja2 = texto.toUpperCase();
+			    			$("#txt").text(caja2);
+			    		});
+			    		
+			       });
+			       
+			   </script>
+			
+		</body>
+</html>

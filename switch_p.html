@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+	   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title></title>
+	    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	    <link rel="stylesheet" type="text/css" href="css/bootstrap-reset.css" media="screen">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+	</head>
+	  	<body>
+
+
+			   <p id="p1">Hack</p>
+			   <p id="p2">maria</p>
+			   <p id="p3">oscar</p>
+			   <p id="p4">Weekend</p>
+			   <!-- Se coloca en cada input los numeros de los parrafos que se quiere intercambiar -->
+			   <input id= "t1" type="text">
+			   <input id= "t2" type="text">
+			   <button id="boton">Cambiar</button>
+			    <script src="js/jquery.js"></script>
+			   <script>
+			       $(function(){
+			            bot = $("#boton");
+			            var text1 = $("#t1");
+			            var text2 = $("#t2");
+			            var p1 = $("#p1").val;
+			            var p2 = $("#p2");
+			            var p3 = $("#p3");
+			            var p1 = $("#p1");
+			            bot.click(function(){
+			               t1 = parseInt(text1.val());
+			               t2 = parseInt(text2.val());
+			               aux = $("p:nth-child("+t1+")").text();
+			               $("p:nth-child("+t1+")").text($("p:nth-child("+t2+")").text());
+			               $("p:nth-child("+t2+")").text(aux);
+
+			           
+			           });
+			       });
+			       
+			   </script>
+			
+		</body>
+</html>

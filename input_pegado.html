@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+	   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title></title>
+	    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	    <link rel="stylesheet" type="text/css" href="css/bootstrap-reset.css" media="screen">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+	</head>
+	  	<body>
+
+			   <input type="text">
+			   <input type="text">
+			   <input type="text">
+			   <button id="boton">pegar</button>
+			       <div id="resultado">Este es el resultado :
+			           
+			       </div>
+			    <script src="js/jquery.js"></script>
+			   <script>
+			       $(function(){
+			            bot = $("#boton");
+			            txt = ""
+			            bot.click(function(){
+			               $("input").each(function(){
+			                txt += $(this).val();
+			               });
+			           $("#resultado").append(txt);
+			           });
+			       });
+			       
+			   </script>
+			
+		</body>
+</html>
